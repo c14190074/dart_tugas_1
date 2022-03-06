@@ -7,7 +7,28 @@ void main(List<String> arguments) {
 
   if (n % 2 == 0) {
     // genap
-    print("Genap");
+    int leftMarker = 1;
+    int rightMarker = n;
+    for (int i = 0; i < n; i++) {
+      for (int j = 0; j < (n * 2); j++) {
+        if (i + j < n) {
+          stdout.write(leftMarker);
+          leftMarker += 1;
+          if (leftMarker > n) {
+            leftMarker = 1;
+          }
+        } else if (j - i >= n) {
+          stdout.write(rightMarker);
+          rightMarker -= 1;
+          if (rightMarker < 1) {
+            rightMarker = n;
+          }
+        } else {
+          stdout.write(" ");
+        }
+      }
+      print("");
+    }
   } else {
     // ganjil => diamond
     int checkMarker = 0;
