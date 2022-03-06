@@ -1,9 +1,15 @@
 import 'dart:io';
 
 void main(List<String> arguments) {
-  // print('Hello world!');
-  stdout.write("Masukkan kata : ");
-  String? dtInput = stdin.readLineSync();
+  stdout.write("Input : ");
+  String? input = stdin.readLineSync();
+  int n = int.parse(input!);
 
-  print(dtInput);
+  if (n % 2 == 0) {
+    // genap
+    print("Genap");
+  } else {
+    // ganjil
+    print("Ganjil");
+  }
 }
